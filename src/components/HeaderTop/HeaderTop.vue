@@ -2,7 +2,7 @@
   <header class="header">
     <slot name="left"></slot>
     <span class="header_title">
-       <span class="header_title_text ellipsis">{{title}}</span>
+      <span class="header_title_text ellipsis">{{title}}</span>
     </span>
     <slot name="right"></slot>
   </header>
@@ -16,8 +16,7 @@ export default {
 }
 </script>
 
-<style scoped lang="stylus" rel="stylesheet/stylus">
-
+<style lang="stylus" rel="stylesheet/stylus">
   .header
     background-color #02a774
     position fixed
@@ -57,4 +56,4 @@ export default {
       transform translateY(-50%)
       .header_login_text
         color #fff
-</style>
+</stylescoped>

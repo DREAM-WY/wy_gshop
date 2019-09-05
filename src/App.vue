@@ -11,8 +11,10 @@ export default {
   components: {
     FooterGuide
   },
-  mounted() {
+  mounted () {
+    this.$store.dispatch('getUserInfo')
     this.$store.dispatch('getAddress')
+    this.$store.dispatch('getcategorys')
   }
 }
 </script>

@@ -14,12 +14,18 @@ export const reqShopLists = (geohash, keyword) => ajax(BASE_URL + '/search_shops
 // 5、获取一次性验证码
 export const reqGetCode = () => ajax('/captcha')
 // 6、用户名密码登陆
-export const reqLogin = (name, pwd, captcha) => ajax(BASE_URL + '/login_pwd', {name, pwd, captcha}, 'POST')
+export const reqPwdLogin = ({name, pwd, captcha}) => ajax(BASE_URL + '/login_pwd', {name, pwd, captcha}, 'POST')
 // 7、发送短信验证码
-export const reqGetSms = (phone) => ajax(BASE_URL + '/sendcode', {phone})
+export const reqSetCode = (phone) => ajax(BASE_URL + '/sendcode', {phone})
 // 8、手机号验证码登陆
-export const reqTextLogin = (phone, code) => ajax(BASE_URL + '/login_sms', {phone, code}, 'POST')
+export const reqSmsLogin = (phone, code) => ajax(BASE_URL + '/login_sms', {phone, code}, 'POST')
 // 9、根据会话获取用户信息
-export const reqGetInformation = () => ajax(BASE_URL + '/userinfo')
+export const reqUserInfo = () => ajax(BASE_URL + '/userinfo')
 // 10、用户登出
-export const reqLoginOut = () => ajax(BASE_URL + '/logout')
+export const reqLogOut = () => ajax(BASE_URL + '/logout')
+// 11 商家数据
+export const reqGetInfo = () => ajax('/info')
+export const reqGetRatings = () => ajax('/ratings')
+export const reqGetGoods = () => ajax('/goods')
+// search
+// export const reqSearchShops = (geohash, keyword) => ajax(BASE_URL + '/search_shops', {geohash, keyword})
